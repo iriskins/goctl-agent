@@ -7,7 +7,7 @@ import (
 
 var Logger *slog.Logger
 
-func LogInit() {
+func NewLogger() {
 	if Logger == nil {
 		LogHandler := slog.NewTextHandler(os.Stdout, &slog.HandlerOptions{
 			Level: slog.LevelInfo,

@@ -24,7 +24,6 @@ func main() {
 		fmt.Printf("\nReceived a signal %v, stopping...\n", sig)
 		time.Sleep(2 * time.Second)
 		app.Stop()
-		os.Exit(0)
 	}()
 	app.Run()
 }

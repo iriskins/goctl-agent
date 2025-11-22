@@ -11,7 +11,6 @@ import (
 )
 
 func main() {
-
 	app := core.NewApplication()
 	signal.Notify(
 		app.ShouldClose,
@@ -22,7 +21,7 @@ func main() {
 	)
 	go func() {
 		sig := <-app.ShouldClose
-		fmt.Printf("\nReceived a signal %v, stopping...", sig)
+		fmt.Printf("\nReceived a signal %v, stopping...\n", sig)
 		time.Sleep(2 * time.Second)
 		app.Stop()
 		os.Exit(0)
